@@ -36,11 +36,12 @@ function First() {
     
         
         <div>
-            <h1>EMPLOYEE FEED BACK FORM</h1>
+
+            <div>
                 {sub ? null:
 
-
                 <form action=''>
+                <h1>EMPLOYEE FEED BACK FORM</h1>
 
                 <label className='first'> Name</label>
                 <input  className='second' onChange={change} type='text' id='name' name='name' value={fill.value}/>                      
@@ -49,19 +50,15 @@ function First() {
                 <input className='four' onChange={change} type='text' id='dep' name='dep' value={fill.value}/> <br></br>
                 <label className='five'>Rating</label>
                 <input className='six' onChange={change} type='number' id='rating' name='rating' value={fill.value} />
-                 <br></br> <br></br>
-                 <button onClick={move} className='submit' >Submit</button> <br></br>
-
-                </form>
-                }
-                
-
-                 {
-                     sub ? 
-                <div>
-                     {/* <h4>EMPLOYEE FEEDBACK DATA</h4> */}
-                    <div className='divv'>
-                     {
+                <br></br> <br></br>
+                <button onClick={move} className='submit' >Submit</button> <br></br>
+                </form>}
+            </div>
+            {sub ? 
+            <div>
+                <h1>EMPLOYEE DATA FORM</h1>/
+                <div className='divv'>
+                    {
                         data.map((value)=> {
                             const {name,dep,rating,id}=value;
                             return(
@@ -71,14 +68,12 @@ function First() {
                             )
                         } )
                      }
-                    </div>
-                    {sub?<input onClick={back} type="button" value="back"/>: null }
-
-
                 </div>
-                :null
-                }
-        </div>
+                {sub?<input onClick={back} type="button" value="back"/>: null }
+                    
+            </div> :null}
+            
+    </div>
     )
 
 }
