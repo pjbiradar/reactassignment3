@@ -56,7 +56,7 @@ function First() {
             </div>
             {sub ? 
             <div>
-                <h1>EMPLOYEE DATA FORM</h1>/
+                <h1>EMPLOYEE DATA FORM</h1>
                 <div className='divv'>
                     {
                         data.map((value)=> {
